@@ -2,6 +2,15 @@
 
 using namespace std;
 
+void AdicaoMatrizes(int size,int** matrizA, int** matrizB, int** matrizR) {
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            matrizR[i][j] = matrizA[i][j] + matrizB[i][j];
+        };
+                    
+    }
+}
+
 int main() {
 
     int n = 0;
@@ -29,9 +38,17 @@ int main() {
         }
     }
 
+    int** matrizR = new int*[n];
+    for (int i = 0; i < n; ++i) {
+        matrizR[i] = new int[n];
+    }
+
     char operacao;
     cin >> operacao;
-    
+
+    if (operacao == 'a') {
+        AdicaoMatrizes(n, matrizA, matrizB, matrizR);
+    }
 
     return 0;
 }
