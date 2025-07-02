@@ -2,6 +2,15 @@
 
 using namespace std;
 
+void ImprimirMatriz(int size, int** matriz) {
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            cout << matriz[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
 void AdicaoMatrizes(int size,int** matrizA, int** matrizB, int** matrizR) {
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
@@ -49,6 +58,8 @@ int main() {
     if (operacao == 'a') {
         AdicaoMatrizes(n, matrizA, matrizB, matrizR);
     }
+
+    ImprimirMatriz(n, matrizR);
 
     return 0;
 }
