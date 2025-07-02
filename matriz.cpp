@@ -20,6 +20,15 @@ void AdicaoMatrizes(int size,int** matrizA, int** matrizB, int** matrizR) {
     }
 }
 
+void SubtracaoMatrizes(int size,int** matrizA, int** matrizB, int** matrizR) {
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            matrizR[i][j] = matrizA[i][j] - matrizB[i][j];
+        };
+                    
+    }
+}
+
 int main() {
 
     int n = 0;
@@ -57,7 +66,10 @@ int main() {
 
     if (operacao == 'a') {
         AdicaoMatrizes(n, matrizA, matrizB, matrizR);
+    } else if (operacao == 's') {
+        SubtracaoMatrizes(n, matrizA, matrizB, matrizR);
     }
+    
 
     ImprimirMatriz(n, matrizR);
 
