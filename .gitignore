@@ -2,3 +2,8 @@
 *.bash*
 *.json
 
+
+# Executaveis
+primo
+vetor
+matriz
